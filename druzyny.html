@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Drużyny i treningi — Pawłowice Bears</title>
+<meta name="description" content="Harmonogram treningów grup D1, D2, C1 i C2 oraz kontakt do trenerów.">
+<meta name="theme-color" content="#0B1B4F">
+<link rel="icon" href="assets/logo-navy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  /* motyw ustawiany przed renderem, żeby uniknąć mignięcia */
+  try {
+    var t = localStorage.getItem('bears-theme');
+    document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+  } catch (e) {}
+</script>
+
+</head>
+<body>
+<a class="btn btn--solid visually-hidden" href="#tresc">Przejdź do treści</a>
+<header class="topbar">
+  <div class="shell topbar__in">
+    <a class="brand" href="index.html">
+      <img class="is-white" src="assets/logo-white.png" alt="" width="42" height="41">
+      <img class="is-navy" src="assets/logo-navy.png" alt="" width="42" height="41">
+      <span class="brand__name"><span>Pawłowice</span>Bears</span>
+    </a>
+
+    <nav class="nav" id="glowna-nawigacja" aria-label="Nawigacja główna">
+      <a href="index.html">Start</a>
+      <a href="druzyny.html" aria-current="page">Drużyny</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="btn btn--solid btn--sm" href="https://activenow.pl/" target="_blank" rel="noopener">Strefa Rodzica</a>
+    </nav>
+
+    <div class="topbar__tools">
+      <div class="socials">
+        <a href="https://www.facebook.com/pawlowicebears" aria-label="Facebook klubu" target="_blank" rel="noopener"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+        <a href="https://www.instagram.com/pawlowicebears" aria-label="Instagram klubu" target="_blank" rel="noopener"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.226.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+      </div>
+
+      <button class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Włącz motyw jasny">
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
+        </svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2z"/>
+        </svg>
+      </button>
+
+      <!-- UZUPEŁNIJ: docelowy adres logowania klubu w Active Now -->
+      <a class="btn btn--solid btn--sm" href="https://activenow.pl/" target="_blank" rel="noopener">Strefa Rodzica</a>
+
+      <button class="burger" data-burger aria-expanded="false" aria-controls="glowna-nawigacja" aria-label="Menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<!--PAGE:start-->
+<main id="tresc">
+
+<section class="pagehead court">
+  <img class="pagehead__mark" src="assets/logo-white.png" alt="" aria-hidden="true">
+  <div class="shell pagehead__in">
+    <p class="crumbs"><a href="index.html">Start</a> / Drużyny</p>
+    <h1>Drużyny i treningi</h1>
+    <p>Trenujemy w czterech grupach. Poniżej znajdziesz trenera, godziny i halę każdej z nich.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="head">
+      <div class="head__bar"></div>
+      <h2>Wybierz grupę</h2>
+      <p>Podział jest orientacyjny — o przydziale decyduje wiek, staż i poziom gry. Jeśli nie wiesz, gdzie zapisać dziecko, napisz do nas, a podpowiemy.</p>
+    </div>
+
+    <div class="btn-row" style="margin-bottom:38px">
+      <a class="btn btn--ghost btn--sm" href="#d1">D1</a>
+      <a class="btn btn--ghost btn--sm" href="#d2">D2</a>
+      <a class="btn btn--ghost btn--sm" href="#c1">C1</a>
+      <a class="btn btn--ghost btn--sm" href="#c2">C2</a>
+    </div>
+
+<article class="team" id="d1">
+  <div class="team__id">
+    <span class="team__code">D1</span>
+    <span class="team__who">Dziewczyny · grupa starsza<small>roczniki 2010–2012</small></span>
+  </div>
+  <div class="team__body">
+    <p>Grupa z regularnymi meczami i turniejami. Pracujemy nad taktyką, ustawieniami i grą na pozycjach.</p>
+
+    <div class="coach">
+      <strong>Trener</strong>
+      <!-- UZUPEŁNIJ: imię i nazwisko oraz dane kontaktowe trenera grupy D1 -->
+      <span class="tbd">Imię i nazwisko</span>
+      <a href="tel:+48600000000">+48 600 000 000</a>
+      <a href="mailto:d1@pawlowicebears.pl">d1@pawlowicebears.pl</a>
+    </div>
+
+    <table class="sched">
+      <caption>Harmonogram treningów w sezonie</caption>
+      <thead>
+        <tr><th scope="col">Dzień</th><th scope="col">Godziny</th><th scope="col">Miejsce</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>Poniedziałek</td><td>17:00–18:30</td><td>Hala Sportowa GOS, ul. Sportowa 14</td></tr>
+          <tr><td>Środa</td><td>17:00–18:30</td><td>Hala Sportowa GOS, ul. Sportowa 14</td></tr>
+          <tr><td>Piątek</td><td>18:00–19:30</td><td>Sala gimnastyczna SP nr 2, ul. Pukowca 4</td></tr>
+      </tbody>
+    </table>
+
+    <div class="btn-row">
+      <a class="btn btn--solid btn--sm" href="kontakt.html?grupa=D1#zapisy">Dołącz do grupy D1</a>
+      <a class="btn btn--ghost btn--sm" href="kontakt.html#hale">Jak dojechać</a>
+    </div>
+  </div>
+</article>
+
+<article class="team" id="d2">
+  <div class="team__id">
+    <span class="team__code">D2</span>
+    <span class="team__who">Dziewczyny · grupa młodsza<small>roczniki 2013–2015</small></span>
+  </div>
+  <div class="team__body">
+    <p>Pierwsze kroki w siatkówce: koordynacja, odbicia sposobem i oburącz, minisiatkówka na małym boisku.</p>
+
+    <div class="coach">
+      <strong>Trener</strong>
+      <!-- UZUPEŁNIJ: imię i nazwisko oraz dane kontaktowe trenera grupy D2 -->
+      <span class="tbd">Imię i nazwisko</span>
+      <a href="tel:+48600000000">+48 600 000 000</a>
+      <a href="mailto:d2@pawlowicebears.pl">d2@pawlowicebears.pl</a>
+    </div>
+
+    <table class="sched">
+      <caption>Harmonogram treningów w sezonie</caption>
+      <thead>
+        <tr><th scope="col">Dzień</th><th scope="col">Godziny</th><th scope="col">Miejsce</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>Wtorek</td><td>16:00–17:30</td><td>Sala gimnastyczna SP nr 2, ul. Pukowca 4</td></tr>
+          <tr><td>Czwartek</td><td>16:00–17:30</td><td>Sala gimnastyczna SP nr 2, ul. Pukowca 4</td></tr>
+      </tbody>
+    </table>
+
+    <div class="btn-row">
+      <a class="btn btn--solid btn--sm" href="kontakt.html?grupa=D2#zapisy">Dołącz do grupy D2</a>
+      <a class="btn btn--ghost btn--sm" href="kontakt.html#hale">Jak dojechać</a>
+    </div>
+  </div>
+</article>
+
+<article class="team" id="c1">
+  <div class="team__id">
+    <span class="team__code">C1</span>
+    <span class="team__who">Chłopcy · grupa starsza<small>roczniki 2010–2012</small></span>
+  </div>
+  <div class="team__body">
+    <p>Trening siły, skoczności i gry w pełnym wymiarze. Grupa startuje w rozgrywkach młodzieżowych.</p>
+
+    <div class="coach">
+      <strong>Trener</strong>
+      <!-- UZUPEŁNIJ: imię i nazwisko oraz dane kontaktowe trenera grupy C1 -->
+      <span class="tbd">Imię i nazwisko</span>
+      <a href="tel:+48600000000">+48 600 000 000</a>
+      <a href="mailto:c1@pawlowicebears.pl">c1@pawlowicebears.pl</a>
+    </div>
+
+    <table class="sched">
+      <caption>Harmonogram treningów w sezonie</caption>
+      <thead>
+        <tr><th scope="col">Dzień</th><th scope="col">Godziny</th><th scope="col">Miejsce</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>Poniedziałek</td><td>18:30–20:00</td><td>Hala Sportowa GOS, ul. Sportowa 14</td></tr>
+          <tr><td>Środa</td><td>18:30–20:00</td><td>Hala Sportowa GOS, ul. Sportowa 14</td></tr>
+          <tr><td>Piątek</td><td>19:30–21:00</td><td>Hala Sportowa GOS, ul. Sportowa 14</td></tr>
+      </tbody>
+    </table>
+
+    <div class="btn-row">
+      <a class="btn btn--solid btn--sm" href="kontakt.html?grupa=C1#zapisy">Dołącz do grupy C1</a>
+      <a class="btn btn--ghost btn--sm" href="kontakt.html#hale">Jak dojechać</a>
+    </div>
+  </div>
+</article>
+
+<article class="team" id="c2">
+  <div class="team__id">
+    <span class="team__code">C2</span>
+    <span class="team__who">Chłopcy · grupa młodsza<small>roczniki 2013–2015</small></span>
+  </div>
+  <div class="team__body">
+    <p>Zabawa piłką, ogólny rozwój ruchowy i podstawy techniki. Bez presji wyniku, z naciskiem na frajdę z gry.</p>
+
+    <div class="coach">
+      <strong>Trener</strong>
+      <!-- UZUPEŁNIJ: imię i nazwisko oraz dane kontaktowe trenera grupy C2 -->
+      <span class="tbd">Imię i nazwisko</span>
+      <a href="tel:+48600000000">+48 600 000 000</a>
+      <a href="mailto:c2@pawlowicebears.pl">c2@pawlowicebears.pl</a>
+    </div>
+
+    <table class="sched">
+      <caption>Harmonogram treningów w sezonie</caption>
+      <thead>
+        <tr><th scope="col">Dzień</th><th scope="col">Godziny</th><th scope="col">Miejsce</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>Wtorek</td><td>17:30–19:00</td><td>Sala gimnastyczna ZSO, ul. Pukowca 5</td></tr>
+          <tr><td>Czwartek</td><td>17:30–19:00</td><td>Sala gimnastyczna ZSO, ul. Pukowca 5</td></tr>
+      </tbody>
+    </table>
+
+    <div class="btn-row">
+      <a class="btn btn--solid btn--sm" href="kontakt.html?grupa=C2#zapisy">Dołącz do grupy C2</a>
+      <a class="btn btn--ghost btn--sm" href="kontakt.html#hale">Jak dojechać</a>
+    </div>
+  </div>
+</article>
+
+    <div class="card" style="margin-top:34px">
+      <h3>Pierwszy trening jest na próbę</h3>
+      <p>Przyjdź na zajęcia bez zapisów i sprawdź, czy grupa pasuje. Potrzebne są tylko buty na zmianę, wygodny strój i bidon. Resztę sprzętu zapewnia klub.</p>
+      <div class="btn-row" style="margin-top:6px">
+        <a class="btn btn--solid btn--sm" href="kontakt.html#zapisy">Umów pierwszy trening</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<!--PAGE:end-->
+<footer class="foot court">
+  <div class="shell foot__in">
+    <div class="foot__brand">
+      <img src="assets/logo-white.png" alt="Logo Pawłowice Bears" width="62" height="60">
+      <p class="foot__note">Młodzieżowa sekcja siatkówki z gminy Pawłowice.<br>Cztery grupy treningowe, dziewczyny i chłopcy, rocznik po roczniku.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/pawlowicebears" aria-label="Facebook klubu" target="_blank" rel="noopener"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+        <a href="https://www.instagram.com/pawlowicebears" aria-label="Instagram klubu" target="_blank" rel="noopener"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.226.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Na skróty</h4>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="druzyny.html">Drużyny i treningi</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="kontakt.html#hale">Gdzie trenujemy</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:kontakt@pawlowicebears.pl">kontakt@pawlowicebears.pl</a></li>
+        <li><a href="tel:+48600000000">+48 600 000 000</a> <span class="tbd">uzupełnij</span></li>
+        <li>ul. Sportowa 14, 43-250 Pawłowice</li>
+        <li><a href="https://activenow.pl/" target="_blank" rel="noopener">Strefa Rodzica Active&nbsp;Now</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Wsparcie i partnerzy</h4>
+      <p class="foot__note">
+        Zajęcia prowadzimy przy wsparciu Gminy Pawłowice oraz Gminnego Ośrodka Sportu w Pawłowicach.
+      </p>
+      <p class="foot__note"><span class="tbd">Miejsce na logotypy partnerów i informację o dofinansowaniu</span></p>
+    </div>
+  </div>
+
+  <div class="shell foot__bar">
+    <span>© <span data-rok>2026</span> Pawłowice Bears. Wszystkie prawa zastrzeżone.</span>
+    <span>Realizacja: strona klubowa · <a href="kontakt.html">Zgłoś poprawkę</a></span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

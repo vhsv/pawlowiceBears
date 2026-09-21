@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galeria — Pawłowice Bears</title>
+<meta name="description" content="Zdjęcia z meczów, treningów i turniejów młodzieżowej siatkówki w Pawłowicach.">
+<meta name="theme-color" content="#0B1B4F">
+<link rel="icon" href="assets/logo-navy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  /* motyw ustawiany przed renderem, żeby uniknąć mignięcia */
+  try {
+    var t = localStorage.getItem('bears-theme');
+    document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+  } catch (e) {}
+</script>
+
+</head>
+<body>
+<a class="btn btn--solid visually-hidden" href="#tresc">Przejdź do treści</a>
+<header class="topbar">
+  <div class="shell topbar__in">
+    <a class="brand" href="index.html">
+      <img class="is-white" src="assets/logo-white.png" alt="" width="42" height="41">
+      <img class="is-navy" src="assets/logo-navy.png" alt="" width="42" height="41">
+      <span class="brand__name"><span>Pawłowice</span>Bears</span>
+    </a>
+
+    <nav class="nav" id="glowna-nawigacja" aria-label="Nawigacja główna">
+      <a href="index.html">Start</a>
+      <a href="druzyny.html">Drużyny</a>
+      <a href="galeria.html" aria-current="page">Galeria</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="btn btn--solid btn--sm" href="https://activenow.pl/" target="_blank" rel="noopener">Strefa Rodzica</a>
+    </nav>
+
+    <div class="topbar__tools">
+      <div class="socials">
+        <a href="https://www.facebook.com/pawlowicebears" aria-label="Facebook klubu" target="_blank" rel="noopener"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+        <a href="https://www.instagram.com/pawlowicebears" aria-label="Instagram klubu" target="_blank" rel="noopener"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.226.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+      </div>
+
+      <button class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Włącz motyw jasny">
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>
+        </svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2z"/>
+        </svg>
+      </button>
+
+      <!-- UZUPEŁNIJ: docelowy adres logowania klubu w Active Now -->
+      <a class="btn btn--solid btn--sm" href="https://activenow.pl/" target="_blank" rel="noopener">Strefa Rodzica</a>
+
+      <button class="burger" data-burger aria-expanded="false" aria-controls="glowna-nawigacja" aria-label="Menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<!--PAGE:start-->
+<main id="tresc">
+
+<section class="pagehead court">
+  <img class="pagehead__mark" src="assets/logo-white.png" alt="" aria-hidden="true">
+  <div class="shell pagehead__in">
+    <p class="crumbs"><a href="index.html">Start</a> / Galeria</p>
+    <h1>Galeria</h1>
+    <p>Mecze, treningi i turnieje. Kliknij zdjęcie, żeby powiększyć.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="filters" data-filters role="group" aria-label="Filtry galerii">
+      <button type="button" data-filter="wszystko" aria-pressed="true">Wszystko</button>
+      <button type="button" data-filter="mecze" aria-pressed="false">Mecze</button>
+      <button type="button" data-filter="treningi" aria-pressed="false">Treningi</button>
+      <button type="button" data-filter="turnieje" aria-pressed="false">Turnieje</button>
+    </div>
+
+    <!-- Grafiki poniżej są zastępcze. Wgraj zdjęcia do assets/zdjecia/ i podmień znaczniki <svg> na <img>. -->
+    <div class="gallery">
+<figure class="shot" data-kat="mecze" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/ball-0.jpg" alt="Mecz ligowy D1 – przyjęcie zagrywki" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mecz ligowy D1 – przyjęcie zagrywki" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gball0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E2160"/><stop offset="1" stop-color="#050C22"/></linearGradient></defs><rect width="800" height="600" fill="url(#gball0)"/><g stroke="#fff" stroke-opacity=".12" stroke-width="4" fill="none"><path d="M0 455h800M0 515h800M0 575h800"/></g><g fill="none" stroke="#fff" stroke-opacity=".62" stroke-width="11"><circle cx="500" cy="285" r="225"/><path d="M304 172c150 52 262 190 288 342"/><path d="M280 390c162-34 316 26 424 150"/><path d="M500 60c-70 136-72 328 14 450"/></g></svg>
+  <figcaption>Mecz ligowy D1 – przyjęcie zagrywki</figcaption>
+</figure>
+<figure class="shot" data-kat="treningi" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/net-1.jpg" alt="Rozgrzewka przed treningiem C1" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Rozgrzewka przed treningiem C1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gnet1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12286F"/><stop offset="1" stop-color="#08112E"/></linearGradient></defs><rect width="800" height="600" fill="url(#gnet1)"/><g stroke="#fff" stroke-opacity=".42" stroke-width="4" fill="none"><path d="M-100 0 L-260 600"/><path d="M-38 0 L-198 600"/><path d="M24 0 L-136 600"/><path d="M86 0 L-74 600"/><path d="M148 0 L-12 600"/><path d="M210 0 L50 600"/><path d="M272 0 L112 600"/><path d="M334 0 L174 600"/><path d="M396 0 L236 600"/><path d="M458 0 L298 600"/><path d="M520 0 L360 600"/><path d="M582 0 L422 600"/><path d="M644 0 L484 600"/><path d="M706 0 L546 600"/><path d="M768 0 L608 600"/><path d="M830 0 L670 600"/><path d="M892 0 L732 600"/><path d="M954 0 L794 600"/><path d="M1016 0 L856 600"/><path d="M1078 0 L918 600"/><path d="M1140 0 L980 600"/><path d="M0 40 L800 -30"/><path d="M0 98 L800 28"/><path d="M0 156 L800 86"/><path d="M0 214 L800 144"/><path d="M0 272 L800 202"/><path d="M0 330 L800 260"/><path d="M0 388 L800 318"/><path d="M0 446 L800 376"/><path d="M0 504 L800 434"/><path d="M0 562 L800 492"/><path d="M0 620 L800 550"/><path d="M0 678 L800 608"/></g><rect x="0" y="0" width="800" height="52" fill="#fff" fill-opacity=".5"/></svg>
+  <figcaption>Rozgrzewka przed treningiem C1</figcaption>
+</figure>
+<figure class="shot" data-kat="turnieje" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/court-2.jpg" alt="Turniej mikołajkowy – dekoracja" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Turniej mikołajkowy – dekoracja" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gcourt2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1B4F"/><stop offset="1" stop-color="#040918"/></linearGradient></defs><rect width="800" height="600" fill="url(#gcourt2)"/><g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="9"><path d="M20 620 L290 90 L510 90 L780 620"/><path d="M196 435 L604 435"/><path d="M120 560 L680 560"/><path d="M400 90 L400 620"/></g><circle cx="660" cy="150" r="66" fill="#fff" fill-opacity=".3"/></svg>
+  <figcaption>Turniej mikołajkowy – dekoracja</figcaption>
+</figure>
+<figure class="shot" data-kat="treningi" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/arcs-3.jpg" alt="Ćwiczenia na dokładność zagrywki" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ćwiczenia na dokładność zagrywki" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="garcs3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16307E"/><stop offset="1" stop-color="#0A1436"/></linearGradient></defs><rect width="800" height="600" fill="url(#garcs3)"/><g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="10" stroke-linecap="round"><path d="M40 560C200 60 540 60 770 400"/><path d="M40 585C250 230 500 215 720 520" stroke-opacity=".3"/><path d="M40 605C280 390 450 380 660 570" stroke-opacity=".18"/></g><circle cx="770" cy="400" r="40" fill="#fff" fill-opacity=".7"/><circle cx="40" cy="560" r="16" fill="#fff" fill-opacity=".45"/></svg>
+  <figcaption>Ćwiczenia na dokładność zagrywki</figcaption>
+</figure>
+<figure class="shot" data-kat="mecze" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/court-1.jpg" alt="Blok środkiem w meczu wyjazdowym" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Blok środkiem w meczu wyjazdowym" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gcourt1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12286F"/><stop offset="1" stop-color="#08112E"/></linearGradient></defs><rect width="800" height="600" fill="url(#gcourt1)"/><g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="9"><path d="M20 620 L290 90 L510 90 L780 620"/><path d="M196 435 L604 435"/><path d="M120 560 L680 560"/><path d="M400 90 L400 620"/></g><circle cx="660" cy="150" r="66" fill="#fff" fill-opacity=".3"/></svg>
+  <figcaption>Blok środkiem w meczu wyjazdowym</figcaption>
+</figure>
+<figure class="shot" data-kat="turnieje" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/ball-2.jpg" alt="Turniej rocznika 2013 w Pawłowicach" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Turniej rocznika 2013 w Pawłowicach" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gball2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1B4F"/><stop offset="1" stop-color="#040918"/></linearGradient></defs><rect width="800" height="600" fill="url(#gball2)"/><g stroke="#fff" stroke-opacity=".12" stroke-width="4" fill="none"><path d="M0 455h800M0 515h800M0 575h800"/></g><g fill="none" stroke="#fff" stroke-opacity=".62" stroke-width="11"><circle cx="500" cy="285" r="225"/><path d="M304 172c150 52 262 190 288 342"/><path d="M280 390c162-34 316 26 424 150"/><path d="M500 60c-70 136-72 328 14 450"/></g></svg>
+  <figcaption>Turniej rocznika 2013 w Pawłowicach</figcaption>
+</figure>
+<figure class="shot" data-kat="treningi" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/arcs-0.jpg" alt="Trening techniczny grupy D2" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Trening techniczny grupy D2" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="garcs0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E2160"/><stop offset="1" stop-color="#050C22"/></linearGradient></defs><rect width="800" height="600" fill="url(#garcs0)"/><g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="10" stroke-linecap="round"><path d="M40 560C200 60 540 60 770 400"/><path d="M40 585C250 230 500 215 720 520" stroke-opacity=".3"/><path d="M40 605C280 390 450 380 660 570" stroke-opacity=".18"/></g><circle cx="770" cy="400" r="40" fill="#fff" fill-opacity=".7"/><circle cx="40" cy="560" r="16" fill="#fff" fill-opacity=".45"/></svg>
+  <figcaption>Trening techniczny grupy D2</figcaption>
+</figure>
+<figure class="shot" data-kat="mecze" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/net-3.jpg" alt="Atak ze skrzydła – seria u siebie" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Atak ze skrzydła – seria u siebie" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gnet3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16307E"/><stop offset="1" stop-color="#0A1436"/></linearGradient></defs><rect width="800" height="600" fill="url(#gnet3)"/><g stroke="#fff" stroke-opacity=".42" stroke-width="4" fill="none"><path d="M-100 0 L-260 600"/><path d="M-38 0 L-198 600"/><path d="M24 0 L-136 600"/><path d="M86 0 L-74 600"/><path d="M148 0 L-12 600"/><path d="M210 0 L50 600"/><path d="M272 0 L112 600"/><path d="M334 0 L174 600"/><path d="M396 0 L236 600"/><path d="M458 0 L298 600"/><path d="M520 0 L360 600"/><path d="M582 0 L422 600"/><path d="M644 0 L484 600"/><path d="M706 0 L546 600"/><path d="M768 0 L608 600"/><path d="M830 0 L670 600"/><path d="M892 0 L732 600"/><path d="M954 0 L794 600"/><path d="M1016 0 L856 600"/><path d="M1078 0 L918 600"/><path d="M1140 0 L980 600"/><path d="M0 40 L800 -30"/><path d="M0 98 L800 28"/><path d="M0 156 L800 86"/><path d="M0 214 L800 144"/><path d="M0 272 L800 202"/><path d="M0 330 L800 260"/><path d="M0 388 L800 318"/><path d="M0 446 L800 376"/><path d="M0 504 L800 434"/><path d="M0 562 L800 492"/><path d="M0 620 L800 550"/><path d="M0 678 L800 608"/></g><rect x="0" y="0" width="800" height="52" fill="#fff" fill-opacity=".5"/></svg>
+  <figcaption>Atak ze skrzydła – seria u siebie</figcaption>
+</figure>
+<figure class="shot" data-kat="turnieje" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/court-0.jpg" alt="Wspólne zdjęcie po finale turnieju" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Wspólne zdjęcie po finale turnieju" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gcourt0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E2160"/><stop offset="1" stop-color="#050C22"/></linearGradient></defs><rect width="800" height="600" fill="url(#gcourt0)"/><g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="9"><path d="M20 620 L290 90 L510 90 L780 620"/><path d="M196 435 L604 435"/><path d="M120 560 L680 560"/><path d="M400 90 L400 620"/></g><circle cx="660" cy="150" r="66" fill="#fff" fill-opacity=".3"/></svg>
+  <figcaption>Wspólne zdjęcie po finale turnieju</figcaption>
+</figure>
+<figure class="shot" data-kat="treningi" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/ball-1.jpg" alt="Praca z piłką w parach, grupa C2" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Praca z piłką w parach, grupa C2" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gball1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12286F"/><stop offset="1" stop-color="#08112E"/></linearGradient></defs><rect width="800" height="600" fill="url(#gball1)"/><g stroke="#fff" stroke-opacity=".12" stroke-width="4" fill="none"><path d="M0 455h800M0 515h800M0 575h800"/></g><g fill="none" stroke="#fff" stroke-opacity=".62" stroke-width="11"><circle cx="500" cy="285" r="225"/><path d="M304 172c150 52 262 190 288 342"/><path d="M280 390c162-34 316 26 424 150"/><path d="M500 60c-70 136-72 328 14 450"/></g></svg>
+  <figcaption>Praca z piłką w parach, grupa C2</figcaption>
+</figure>
+<figure class="shot" data-kat="mecze" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/arcs-2.jpg" alt="Narada drużyny przy ławce" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Narada drużyny przy ławce" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="garcs2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1B4F"/><stop offset="1" stop-color="#040918"/></linearGradient></defs><rect width="800" height="600" fill="url(#garcs2)"/><g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="10" stroke-linecap="round"><path d="M40 560C200 60 540 60 770 400"/><path d="M40 585C250 230 500 215 720 520" stroke-opacity=".3"/><path d="M40 605C280 390 450 380 660 570" stroke-opacity=".18"/></g><circle cx="770" cy="400" r="40" fill="#fff" fill-opacity=".7"/><circle cx="40" cy="560" r="16" fill="#fff" fill-opacity=".45"/></svg>
+  <figcaption>Narada drużyny przy ławce</figcaption>
+</figure>
+<figure class="shot" data-kat="turnieje" tabindex="0" role="button">
+  <!-- Podmień poniższy <svg> na zdjęcie, np.: <img src="assets/zdjecia/net-0.jpg" alt="Puchar za drugie miejsce" loading="lazy"> -->
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Puchar za drugie miejsce" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gnet0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E2160"/><stop offset="1" stop-color="#050C22"/></linearGradient></defs><rect width="800" height="600" fill="url(#gnet0)"/><g stroke="#fff" stroke-opacity=".42" stroke-width="4" fill="none"><path d="M-100 0 L-260 600"/><path d="M-38 0 L-198 600"/><path d="M24 0 L-136 600"/><path d="M86 0 L-74 600"/><path d="M148 0 L-12 600"/><path d="M210 0 L50 600"/><path d="M272 0 L112 600"/><path d="M334 0 L174 600"/><path d="M396 0 L236 600"/><path d="M458 0 L298 600"/><path d="M520 0 L360 600"/><path d="M582 0 L422 600"/><path d="M644 0 L484 600"/><path d="M706 0 L546 600"/><path d="M768 0 L608 600"/><path d="M830 0 L670 600"/><path d="M892 0 L732 600"/><path d="M954 0 L794 600"/><path d="M1016 0 L856 600"/><path d="M1078 0 L918 600"/><path d="M1140 0 L980 600"/><path d="M0 40 L800 -30"/><path d="M0 98 L800 28"/><path d="M0 156 L800 86"/><path d="M0 214 L800 144"/><path d="M0 272 L800 202"/><path d="M0 330 L800 260"/><path d="M0 388 L800 318"/><path d="M0 446 L800 376"/><path d="M0 504 L800 434"/><path d="M0 562 L800 492"/><path d="M0 620 L800 550"/><path d="M0 678 L800 608"/></g><rect x="0" y="0" width="800" height="52" fill="#fff" fill-opacity=".5"/></svg>
+  <figcaption>Puchar za drugie miejsce</figcaption>
+</figure>
+    </div>
+
+    <p class="muted" style="margin-top:28px">Masz zdjęcia z meczu lub turnieju? Wyślij je na <a href="mailto:kontakt@pawlowicebears.pl">kontakt@pawlowicebears.pl</a> — chętnie dodamy je do galerii.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie" aria-hidden="true">
+  <button type="button" class="lb-close" aria-label="Zamknij">×</button>
+  <button type="button" class="lb-prev" aria-label="Poprzednie zdjęcie">‹</button>
+  <button type="button" class="lb-next" aria-label="Następne zdjęcie">›</button>
+  <div class="lightbox__box">
+    <div class="lightbox__frame"></div>
+    <p class="lightbox__cap"></p>
+  </div>
+</div>
+
+</main>
+<!--PAGE:end-->
+<footer class="foot court">
+  <div class="shell foot__in">
+    <div class="foot__brand">
+      <img src="assets/logo-white.png" alt="Logo Pawłowice Bears" width="62" height="60">
+      <p class="foot__note">Młodzieżowa sekcja siatkówki z gminy Pawłowice.<br>Cztery grupy treningowe, dziewczyny i chłopcy, rocznik po roczniku.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/pawlowicebears" aria-label="Facebook klubu" target="_blank" rel="noopener"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+        <a href="https://www.instagram.com/pawlowicebears" aria-label="Instagram klubu" target="_blank" rel="noopener"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.226.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Na skróty</h4>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="druzyny.html">Drużyny i treningi</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="kontakt.html#hale">Gdzie trenujemy</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:kontakt@pawlowicebears.pl">kontakt@pawlowicebears.pl</a></li>
+        <li><a href="tel:+48600000000">+48 600 000 000</a> <span class="tbd">uzupełnij</span></li>
+        <li>ul. Sportowa 14, 43-250 Pawłowice</li>
+        <li><a href="https://activenow.pl/" target="_blank" rel="noopener">Strefa Rodzica Active&nbsp;Now</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Wsparcie i partnerzy</h4>
+      <p class="foot__note">
+        Zajęcia prowadzimy przy wsparciu Gminy Pawłowice oraz Gminnego Ośrodka Sportu w Pawłowicach.
+      </p>
+      <p class="foot__note"><span class="tbd">Miejsce na logotypy partnerów i informację o dofinansowaniu</span></p>
+    </div>
+  </div>
+
+  <div class="shell foot__bar">
+    <span>© <span data-rok>2026</span> Pawłowice Bears. Wszystkie prawa zastrzeżone.</span>
+    <span>Realizacja: strona klubowa · <a href="kontakt.html">Zgłoś poprawkę</a></span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
