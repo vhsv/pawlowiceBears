@@ -172,7 +172,7 @@
         "Grupa: " + d.get("grupa") + "\n\n" +
         d.get("wiadomosc");
 
-      var adres = form.dataset.mailto || "kontakt@pawlowicebears.pl";
+      var adres = form.dataset.mailto || "pawlowicebears@gmail.com";
       window.location.href =
         "mailto:" + adres +
         "?subject=" + encodeURIComponent("Zapytanie ze strony – grupa " + d.get("grupa")) +
