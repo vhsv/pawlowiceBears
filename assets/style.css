@@ -89,7 +89,7 @@ p  { margin: 0 0 1em; }
 
 /* --- 3. Pomocnicze ---------------------------------------------- */
 .shell { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--rail); }
-.section { padding-block: clamp(64px, 9vw, 130px); position: relative; }
+.section { padding-block: clamp(64px, 4vw, 130px); position: relative; }
 .section--alt { background: var(--bg-alt); }
 .lede { font-size: clamp(1.05rem, 1.7vw, 1.25rem); color: var(--muted); max-width: 62ch; }
 .muted { color: var(--muted); }
@@ -279,7 +279,38 @@ html[data-theme="light"] .hero { background: var(--navy); }
   text-decoration: none; display: grid; gap: 10px; align-content: start;
   transition: background-color .2s ease;
 }
-.tile:hover { background: var(--panel-2); }
+.tile {
+  position: relative; cursor: pointer;
+  background: var(--panel);
+  padding: clamp(26px, 3vw, 40px) clamp(52px, 6vw, 64px) clamp(26px, 3vw, 40px) clamp(26px, 3vw, 40px);
+  text-decoration: none; display: grid; gap: 10px; align-content: start;
+  transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease, z-index 0s;
+}
+/* pasek u góry, wypełnia się przy najechaniu/fokusie — sygnał "to jest przycisk" */
+.tile::before {
+  content: ""; position: absolute; left: 0; top: 0; height: 4px; width: 34px;
+  background: var(--line-strong);
+  transition: width .3s cubic-bezier(.3,.8,.3,1), background-color .2s ease;
+}
+/* strzałka w rogu — jednoznaczne wezwanie do kliknięcia */
+.tile::after {
+  content: "→"; position: absolute; right: clamp(20px, 3vw, 30px); bottom: clamp(20px, 3vw, 30px);
+  font-family: var(--display); font-weight: 700; font-size: 1.4rem; line-height: 1;
+  color: var(--muted);
+  transition: transform .25s cubic-bezier(.3,.8,.3,1), color .2s ease;
+}
+.tile:hover,
+.tile:focus-visible {
+  background: var(--panel-2);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+.tile:hover::before,
+.tile:focus-visible::before { width: 100%; background: var(--text); }
+.tile:hover::after,
+.tile:focus-visible::after { transform: translateX(5px); color: var(--text); }
+.tile:focus-visible { outline: none; }
 .tile h3 { font-size: 1.5rem; }
 .tile span { color: var(--muted); font-size: .97rem; }
 .tile b { font-family: var(--display); font-weight: 700; letter-spacing: .04em; font-size: .95rem; }
@@ -397,10 +428,6 @@ form.klub { display: grid; gap: 18px; }
 .form-note[hidden] { display: none; }
 
 .activenow { border: 1px solid var(--line-strong); background: var(--panel); padding: clamp(26px, 3.5vw, 46px); display: grid; gap: 20px; }
-.activenow__slot {
-  min-height: 220px; border: 2px dashed var(--line-strong); display: grid; place-items: center;
-  text-align: center; padding: 30px; color: var(--muted);
-}
 
 /* --- 11. Stopka ---------------------------------------------------- */
 .foot { background: var(--navy); color: #E7ECFA; position: relative; overflow: hidden; }
@@ -439,6 +466,7 @@ html[data-theme="light"] .foot { color: #E7ECFA; }
 .crumbs { font-size: .86rem; color: #93A2CC; }
 .crumbs a { color: #93A2CC; text-decoration: none; }
 .crumbs a:hover { color: #fff; }
+
 
 /* --- 13. Responsywność ---------------------------------------------- */
 @media (max-width: 960px) {
